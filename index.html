@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>LABIONM - Laboratório de Bioinformática de Organismos Não - Modelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Faixa de imagens rotativas -->
+    <div id="banner"></div>
+
+    <!-- Logo e nome do laboratório -->
+    <header>
+        <div class="cabecalho">
+            <img src="imagens/logo.png" alt="Logo do Laboratório" class="logo">
+            <div class="titulo">
+                <h2>Laboratório de Bioinformática de Organismos Não - Modelo</h2>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="linhas.html">Linhas de Pesquisa</a>
+            <a href="membros.html">Membros</a>
+            <a href="parceiros.html">Parceiros</a>
+            <a href="publicacoes.html">Publicações</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+   
+    <!-- Script da transição de imagens -->
+    <script>
+        const imagens = [
+            "imagens/fundo1.jpg",
+            "imagens/fundo2.jpg",
+            "imagens/fundo3.jpg"
+        ];
+
+        let indexAtual = 0;
+        const banner = document.getElementById("banner");
+
+        function trocarImagem() {
+            indexAtual = (indexAtual + 1) % imagens.length;
+            banner.style.backgroundImage = `url('${imagens[indexAtual]}')`;
+        }
+
+        // Define a primeira imagem
+        banner.style.backgroundImage = `url('${imagens[0]}')`;
+
+        // Troca a cada 5 segundos
+        setInterval(trocarImagem, 5000);
+    </script>
+ 
+</header>
+
+    <main>
+        <h2>Bem-vindo</h2>
+        <p>O Laboratório de Bioinformática de Organismos Não - Modelo é dedicado à análise de dados biológicos de espécies pouco estudadas, com foco em genômica, metagenômica e microbiomas. Desenvolvemos ferramentas e pipelines para investigar relações ecológicas, funcionais e evolutivas em organismos não tradicionais da ciência biológica.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - UNESP | LaBiONM - Laboratório de Bioinformática de Organismos Não - Modelo</p>
+    </footer>
+
+</body>
+</html>

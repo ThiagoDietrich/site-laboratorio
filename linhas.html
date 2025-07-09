@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>LABIONM - Laboratório de Bioinformática de Organismos Não - Modelo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Faixa de imagens rotativas -->
+    <div id="banner"></div>
+
+    <!-- Logo e nome do laboratório -->
+    <header>
+        <div class="cabecalho">
+            <img src="imagens/logo.png" alt="Logo do Laboratório" class="logo">
+            <div class="titulo">
+                <h2>Laboratório de Bioinformática de Organismos Não - Modelo</h2>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="linhas.html">Linhas de Pesquisa</a>
+            <a href="membros.html">Membros</a>
+            <a href="parceiros.html">Parceiros</a>
+            <a href="publicacoes.html">Publicações</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+   
+    <!-- Script da transição de imagens -->
+    <script>
+        const imagens = [
+            "imagens/fundo1.jpg",
+            "imagens/fundo2.jpg",
+            "imagens/fundo3.jpg"
+        ];
+
+        let indexAtual = 0;
+        const banner = document.getElementById("banner");
+
+        function trocarImagem() {
+            indexAtual = (indexAtual + 1) % imagens.length;
+            banner.style.backgroundImage = `url('${imagens[indexAtual]}')`;
+        }
+
+        // Define a primeira imagem
+        banner.style.backgroundImage = `url('${imagens[0]}')`;
+
+        // Troca a cada 5 segundos
+        setInterval(trocarImagem, 5000);
+    </script>
+ 
+</header>
+
+<main class="pesquisa-container">
+  <h2 class="titulo-pagina">Linhas de Pesquisa</h2>
+  <div class="cards-pesquisa">
+
+    <div class="card-ilustrado">
+      <img src="imagens/mitogenoma.jpg" alt="Ilustração mitogenoma">
+      <div class="texto-card">
+        <h3>Construção de mitogenomas a partir de dados de transcriptoma</h3>
+        <p>Montagem e anotação de genomas mitocondriais com base em dados de RNA, com foco em espécies não modelo e ferramentas bioinformáticas personalizadas.</p>
+      </div>
+    </div>
+
+    <div class="card-ilustrado">
+      <img src="imagens/abelhas_pesticidas.jpg" alt="Abelhas expostas a pesticidas">
+      <div class="texto-card">
+        <h3>Expressão diferencial de genes em abelhas sem ferrão expostas a pesticidas</h3>
+        <p>Estudo do impacto molecular causado por agrotóxicos em abelhas nativas, com foco na resposta imune, detoxificação e alterações comportamentais.</p>
+      </div>
+    </div>
+
+    <div class="card-ilustrado">
+      <img src="imagens/microbiota.jpg" alt="Microbiota em abelhas">
+      <div class="texto-card">
+        <h3>Microbiota do papo melífero e intestino de abelhas sem ferrão</h3>
+        <p>Análise comparativa da diversidade e função de comunidades microbianas associadas ao trato digestivo de diferentes espécies de abelhas.</p>
+      </div>
+    </div>
+
+    <div class="card-ilustrado">
+      <img src="imagens/metagenomica.jpg" alt="Análise metagenômica">
+      <div class="texto-card">
+        <h3>Metagenômica e Bioinformática</h3>
+        <p>Aplicação de pipelines bioinformáticos e bancos de dados para a análise de sequências ômicas em comunidades complexas e ambientes diversos.</p>
+      </div>
+    </div>
+
+    <div class="card-ilustrado">
+      <img src="imagens/interacoes.jpg" alt="Interações abelhas e microrganismos">
+      <div class="texto-card">
+        <h3>Interações entre abelhas e microrganismos</h3>
+        <p>Exploração das relações simbióticas entre abelhas e microrganismos, abordando implicações ecológicas, evolutivas e aplicadas.</p>
+      </div>
+    </div>
+
+  </div>
+</main>

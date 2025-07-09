@@ -1,0 +1,358 @@
+/* === BASE GERAL === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #4FA88A;
+}
+
+main {
+  background-color: white;
+  padding: 2em;
+}
+
+/* === HEADER E LOGO === */
+header {
+  background-color: #53ad92;
+  color: white;
+  padding: 1em;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  max-width: 250px;
+  margin-bottom: -10px;
+  flex-shrink: 0;
+
+}
+
+/* === BANNER === */
+#banner {
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1.5s ease-in-out;
+}
+
+/* === TÍTULO DO LABORATÓRIO === */
+.titulo-lab {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  color: #5E3C29;
+  text-align: center;
+  font-size: clamp(1.2rem, 3.5vw, 2.5rem); /* adapta ao tamanho da tela */
+  line-height: 1.2;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* === NAVEGAÇÃO === */
+nav {
+  background-color: #5C4033;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #8B5E3C;
+  color: white;
+}
+
+/* === SEÇÃO DE MEMBROS === */
+.grupo-membros {
+  margin-bottom: 3em;
+}
+
+.grupo-membros h3 {
+  color: #5a3922;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3em;
+}
+
+.membro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1em 0;
+  gap: 20px;
+  background-color: #7c5847;
+  padding: 1em;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.membro img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  border: 5px solid #0c070473;
+  box-shadow: 0 0 5px rgba(65, 44, 18, 0.815);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.membro .texto-membro {
+  flex: 1;
+  text-align: left;
+}
+
+
+.membro .texto-membro {
+  flex: 1;
+  min-width: 200px;
+}
+
+.membro h4 {
+  margin: 0 0 0.3em;
+  font-size: 1.2em;
+  color: #222222;
+}
+
+.membro a {
+  color: #36babe;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.membro a:hover {
+  text-decoration: underline;
+}
+
+.membro p {
+  color: #f5f5f5; /* Altere para qualquer cor desejada */
+}
+
+/* === TÍTULOS INTERNOS === */
+.titulo h1,
+.titulo h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.titulo h2 {
+  color: rgba(99, 60, 45, 0.829);
+  margin: 0;
+  font-size: 2rem; /* menor que 2.8em */
+  font-weight: bold;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: relative;
+  width: 100%;
+}
+
+
+#linha_de_pesquisa
+
+.cards-pesquisa {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-ilustrado {
+  display: flex;
+  background-color: #f3f1ee94;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-ilustrado:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+
+.card-ilustrado img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.texto-card {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.texto-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  color: #2e4a6f;
+}
+
+.texto-card p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .card-ilustrado {
+    flex-direction: column;
+  }
+
+  .card-ilustrado img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+####adicionado_depois
+
+/* Filtros */
+.filtros-membros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+  margin: 2em auto 1em;
+}
+
+.filtros-membros button {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 6px;
+  background-color: #612812;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filtros-membros button:hover {
+  background-color: #612812;
+}
+
+/* Cards de membros */
+.membro {
+  display: flex;
+  background-color: #81694a94;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin: 1em auto;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 800px;
+  align-items: flex-start;
+}
+
+.membro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.membro img {
+  width: 140px;
+  height: auto;
+  object-fit: cover;
+  border-right: 1px solid #eee;
+}
+
+.texto-membro {
+  padding: 0.8em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.texto-membro h4 {
+  margin: 0 0 0.4em;
+  font-size: 1em;
+  color: #612812;
+}
+
+.texto-membro p {
+  margin: 0.2em 0;
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #333;
+}
+
+.texto-membro a {
+  color: #612812;
+  text-decoration: underline;
+}
+
+/* Título das seções */
+main h2 {
+  text-align: center;
+  margin-top: 1.5em;
+  font-family: 'Roboto Slab', serif;
+  font-size: 2em;
+  color: #612812;
+}
+
+.grupo-membros h3 {
+  font-size: 1.3em;
+  color: #181717;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #ccc;
+  font-family: 'Roboto Slab', serif;
+  padding-bottom: 0.2em;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .membro {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .membro img {
+    width: 100%;
+    max-height: 250px;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .texto-membro {
+    padding: 1em;
+  }
+}
+
+.filtros-membros {
+  text-align: center;
+  display: block;
+  margin: 2em auto 1em;
+}
+.filtros-membros button {
+  margin: 0.3em;
+}
+
